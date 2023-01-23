@@ -1,0 +1,174 @@
+.about {
+    &_block {
+        margin-top: 50px;
+        &_left {
+            & span {
+                font-family: 'Stolzl';
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+                text-transform: uppercase;
+                color: #999999;
+            }
+            & h3 {
+                font-family: 'Stolzl';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                color: #171C21;
+                margin-top: 15px;
+            }
+            & p {
+                font-family: 'Stolzl';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: #171C21;
+                margin-top: 20px;
+            }
+            & a {
+                margin-top: 30px;
+            }
+        }
+        &_right {
+            margin-top: 100px;
+            &_item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 60px;
+                & span {
+                    font-family: 'Stolzl';
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-transform: uppercase;
+                    color: #171C21;
+                    margin-top: 20px;
+                }
+                & p {
+                    font-family: 'Stolzl';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: center;
+                    color: #171C21;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    @media (min-width: 480px) {
+        &_block {
+            &_left {
+                & a {
+                    width: 336px;
+                }
+            }
+            &_right {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                position: relative;
+                margin-top: 20px;
+                &_item {
+                    width: calc(50% - 20px);
+                    margin-top: 80px;
+                    & p {
+                        & br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        &_block {
+            &_left {
+                & h3 {
+                    font-size: 36px;
+                    line-height: 43px;
+                    width: 500px;
+                }
+                & p {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                & a {
+                    width: 180px;
+                }
+            }
+            &_right {
+                margin-top: 30px;
+                &_item {
+                    width: calc(50% - 25px);
+                    margin-top: 70px;
+                    & p {
+                        font-size: 16px;
+                        line-height: 22px;
+                        & br {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        &_block {
+            margin-top: 75px;
+            &_right {
+                &_item {
+                    width: calc(25% - 22.5px);
+                    & p {
+                        & br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_block {
+            display: flex;
+            align-items: flex-start;
+            &_left {
+                max-width: 425px;
+                & h3 {
+                    width: auto;
+                }
+            }
+            &_right {
+                margin-left: 125px;
+                margin-top: 0px;
+                &_item {
+                    width: calc(50% - 15px);
+                    min-width: 300px;
+                    &:first-child {
+                        margin-top: 0px;
+                    }
+                    &:nth-child(2) {
+                        margin-top: 0px;
+                    }
+                    & p {
+                        & br {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1440px) {
+        &_block {
+            &_left {
+                max-width: 525px;
+            }
+        }
+    }
+}

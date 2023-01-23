@@ -1,0 +1,155 @@
+.first {
+    box-sizing: border-box;
+    position: relative;
+    background-color: #FF0000;
+    padding: 60px 0px;
+    &_top {
+        &_left {
+            & span {
+                font-family: 'Stolzl';
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+            & h4 {
+                font-family: 'Stolzl';
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                color: #FFFFFF;
+                margin-top: 15px;
+            }
+        }
+        &_right {
+            display: none;
+        }
+    }
+    &_slider {
+        margin-top: 50px;
+        box-sizing: border-box;
+        & .slick-track {
+            display: flex !important;
+            align-items: stretch;
+        }
+        &_item {
+            height: inherit !important;
+            &_wrap {
+                width: 266px;
+                box-sizing: border-box;
+                background: #FFFFFF;
+                border-radius: 30px 30px 0px 30px;
+                padding: 16px;
+                position: relative;
+                height: 100%;
+                margin-left: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            & h5 {
+                font-family: 'Stolzl';
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                color: #171C21;
+            }
+            & img {
+                width: 234px;
+            }
+            &_price {
+                box-sizing: border-box;
+                padding: 7px 14px;
+                background: #00A400;
+                border-radius: 5px 5px 0px 5px;
+                position: absolute;
+                bottom: 16px;
+                left: 16px;
+                & p {
+                    font-family: 'Stolzl';
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 30px;
+                    color: #FFFFFF;
+                    & span {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 90px 0px 150px 0px;
+        &_top {
+            &_left {
+                & h4 {
+                    font-size: 36px;
+                    line-height: 43px;
+                }
+            }
+        }
+        &_slider {
+            &_item {
+                &_wrap {
+                    width: 350px;
+                    padding: 30px;
+                    border-radius: 40px 40px 0px 40px;
+                }
+                & img {
+                    width: 290px;
+                }
+                &_price {
+                    padding: 8px 16px;
+                    left: 30px;
+                    bottom: 30px;
+                    & p {
+                        font-size: 36px;
+                        line-height: 36px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            &_right {
+                display: flex;
+                align-items: center;
+                &_next {
+                    margin-left: 44px;
+                    & i {
+                        color: #fff;
+                        opacity: 0.4;
+                        transition: all 0.2s;
+                        font-size: 24px;
+                    }
+                    &:hover {
+                        & i {
+                            opacity: 1;
+                            transition: all 0.2s;
+                        }
+                    }
+                }
+                &_prev {
+                    & i {
+                        color: #fff;
+                        opacity: 0.4;
+                        transition: all 0.2s;
+                        font-size: 24px;
+                    }
+                    &:hover {
+                        & i {
+                            opacity: 1;
+                            transition: all 0.2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
