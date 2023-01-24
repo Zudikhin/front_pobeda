@@ -38,6 +38,30 @@ $(document).ready(function () {
         nextArrow: $('.first_top_right_next')
     });
 
+    $('.news_slider').slick({
+        dots: false,
+        infinite: true,
+        arrows: true,
+        variableWidth: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        speed: 500,
+        autoplaySpeed: 1000,
+        cssEase: 'linear',
+        prevArrow: $('.news_block_top_right_prev'),
+        nextArrow: $('.news_block_top_right_next'),
+        responsive: [
+            {
+              breakpoint: 1199,
+              settings: {
+                variableWidth: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+        ]
+    });
+
     $('input[type="tel"]').inputmask("+7(999)999-99-99");
 
 
