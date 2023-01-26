@@ -1,0 +1,342 @@
+.opt {
+    &_assortment {
+        & h2 {
+            font-family: 'Stolzl';
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: #171C21;
+        }
+        &_description {
+            font-family: 'Stolzl';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #171C21;
+            text-align: center;
+            margin-top: 20px;
+        }
+        &_list {
+            display: flex;
+            position: relative;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &_item {
+                width: calc(100%/3);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 40px;
+                &_wrap {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    &_img {
+                        width: 70px;
+                        height: 70px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-sizing: border-box;
+                        background: #FF0000;
+                        border-radius: 7px 7px 0px 7px;
+                        transition: all 0.2s linear;
+                        border: 1px solid #FF0000;
+                        & img {
+                            &.hover {
+                                display: none;
+                            }
+                            &.default {
+                                display: block;
+                            }
+                        }
+                    }
+                    & h5 {
+                        font-family: 'Stolzl';
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #171C21;
+                        text-align: center;
+                        margin-top: 15px;
+                    }
+                }
+                &:hover {
+                    & .opt_assortment_list_item_wrap {
+                        &_img {
+                            background: #fff;
+                            transition: all 0.2s linear;
+                            & img {
+                                &.hover {
+                                    display: block;
+                                }
+                                &.default {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_work {
+        margin-top: 100px;
+        & h2 {
+            font-family: 'Stolzl';
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #171C21;
+        }
+        & ul {
+            box-sizing: border-box;
+            padding-left: 14px;
+            & li {
+                position: relative;
+                margin-top: 15px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: -14px;
+                    top: 7px;
+                    width: 6px;
+                    height: 6px;
+                    box-sizing: border-box;
+                    border-radius: 50%;
+                    background: #FF0000;
+                }
+                & p {
+                    font-family: 'Stolzl';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #171C21;
+                }
+            }
+        }
+        &_text {
+            font-family: 'Stolzl';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #171C21;
+            margin-top: 50px;
+            & a {
+                color: #00A400;
+                text-decoration: underline;
+            }
+        }
+    }
+    &_form {
+        margin-top: 100px;
+        &_block {
+            background: url(../img/opt/back.png), #F5F5F5;
+            background-size: cover;
+            background-position: 50%;
+            border-radius: 10px 10px 0px 10px;
+            box-sizing: border-box;
+            padding: 30px;
+            & h5 {
+                font-family: 'Stolzl';
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 25px;
+                color: #171C21;
+            }
+            &_name {
+                font-family: 'Stolzl';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: #171C21;
+                margin-top: 20px;
+            }
+            &_list {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                & p {
+                    font-family: 'Stolzl';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #171C21;
+                    opacity: 0.7;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20px;
+                    & img {
+                        margin-right: 10px;
+                    }
+                }
+                & a {
+                    font-family: 'Stolzl';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #171C21;
+                    opacity: 0.7;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20px;
+                    & img {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        &_main {
+            & form {
+                & p {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    position: relative;
+                    & span {
+                        width: 100%;
+                        margin-top: 40px;
+                        & input {
+                            width: 100%;
+                            font-family: 'Stolzl';
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: black;
+                            border-bottom: 1px solid #999999;
+                            box-sizing: border-box;
+                            padding-bottom: 8px;
+                        }
+                        & textarea {
+                            width: 100%;
+                            height: 54px;
+                            font-family: "Stolzl";
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: black;
+                            border-bottom: 1px solid #999999;
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
+                            padding-bottom: 8px;
+                        }
+                    }
+                }
+            }
+            & .wpcf7-submit {
+                height: 52px;
+                width: 100%;
+                box-sizing: border-box;
+                background: #00A400;
+                border: 1px solid #00A400;
+                border-radius: 5px 5px 0px 5px;
+                font-family: 'Stolzl';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 52px;
+                text-align: center;
+                color: #FFFFFF;
+                cursor: pointer;
+                margin-top: 30px;
+            }
+            &_file {
+                margin-top: 30px;
+                margin-bottom: 50px;
+                &_wrap {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    &_par {
+                        font-family: 'Stolzl';
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #171C21;
+                        margin-left: 10px;
+                        cursor: pointer;
+                    }
+                    & input {
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+                }
+                &_text {
+                    font-family: 'Stolzl';
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 13px;
+                    color: #999999;
+                    margin-top: 10px;
+                }
+            }
+            &_check {
+                margin-left: 40px;
+                font-family: 'Stolzl';
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 13px;
+                color: #999999;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        &_assortment {
+            & h2 {
+                font-size: 36px;
+                line-height: 43px;
+            }
+            &_description {
+                font-size: 16px;
+                line-height: 22px;
+                margin-top: 20px;
+            }
+            &_list {
+                margin-top: 50px;
+                &_item {
+                    width: calc(100%/6);
+                    margin-top: 0px;
+                }
+            }
+        }
+        &_work {
+            margin-top: 150px;
+            & h2 {
+                font-size: 36px;
+                line-height: 43px;
+            }
+            & ul {
+                margin-top: 20px;
+                & li {
+                    & p {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                    &::after {
+                        top: 9px;
+                    }
+                }
+            }
+            &_text {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        &_assortment {
+            &_description {
+                width: 756px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+        }
+    }
+}

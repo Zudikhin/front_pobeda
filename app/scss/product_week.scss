@@ -1,0 +1,154 @@
+.product_week {
+    margin-bottom: 150px;
+    &_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h1 {
+            font-family: 'Stolzl';
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 43px;
+            text-align: center;
+            color: #171C21;
+        }
+        & p {
+            font-family: 'Stolzl';
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: #FF0000;
+            margin-top: 30px;
+        }
+    }
+    @media (min-width: 768px) {
+        margin-bottom: 100px;
+        &_title {
+            & h1 {
+                font-size: 48px;
+                line-height: 58px;
+            }
+            & p {
+                font-size: 36px;
+                line-height: 43px;
+            }
+        }
+    }
+}
+
+.product_list {
+    background: #FF0000;
+    box-sizing: border-box;
+    position: relative;
+    padding: 100px 0px;
+    margin-top: 38px;
+    &_wrap {
+        &_item {
+            position: relative;
+            display: block;
+            margin-top: 50px;
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 30px 30px 0px 30px;
+            background-color: #fff;
+            & h5 {
+                font-family: 'Stolzl';
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                color: #171C21;
+            }
+            & img {
+                width: 100%;
+            }
+            &_price {
+                box-sizing: border-box;
+                padding: 7px 14px;
+                background: #00A400;
+                border-radius: 5px 5px 0px 5px;
+                position: absolute;
+                bottom: 16px;
+                left: 16px;
+                & p {
+                    font-family: "Stolzl";
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 30px;
+                    color: #FFFFFF;
+                    & span {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+    }
+    @media (min-width: 480px) {
+        margin-top: 114px;
+        &_wrap {
+            &_item {
+                padding: 30px;
+                &_price {
+                    bottom: 30px;
+                    left: 30px;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        margin-top: 100px;
+        &_wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            position: relative;
+            flex-wrap: wrap;
+            &_item {
+                width: calc(50% - 12.5px);
+                display: flex;
+                height: inherit;
+                flex-direction: column;
+                justify-content: space-between;
+                & h5 {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                &:nth-child(2) {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        padding: 150px 0px;
+        &_wrap {
+            justify-content: flex-start;
+            &_item {
+                width: calc(100%/3 - 40px/3);
+                margin-left: 20px;
+                margin-top: 70px;
+                &:first-child {
+                    margin-left: 0px;
+                }
+                &:nth-child(3) {
+                    margin-top: 0px;
+                }
+                &:nth-child(3n + 4) {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_wrap {
+            &_item {
+                width: calc(100%/3 - 100px/3);
+                margin-left: 50px;
+            }
+        }
+    }
+}
