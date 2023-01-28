@@ -386,6 +386,10 @@ input:focus {
   margin: 0px 6px;
 }
 
+.wpcf7-submit {
+  padding: 0px;
+}
+
 .header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1449,12 +1453,18 @@ span.current {
   border-bottom: 1px solid #999;
 }
 
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+  background-color: white;
+}
+
 .nice-select {
   width: 100%;
   padding-left: 0px;
   border: none;
   border-radius: 0px;
   border-bottom: 1px solid #999;
+  height: 33px;
+  line-height: 33px;
 }
 
 .nice-select:hover {
@@ -2065,6 +2075,9 @@ span.current {
   }
 }
 
+.opt {
+  margin-bottom: 100px;
+}
 .opt_assortment h2 {
   font-family: "Stolzl";
   font-weight: 500;
@@ -2229,7 +2242,6 @@ span.current {
 }
 .opt_form_block {
   background: url(../img/opt/back.png), #F5F5F5;
-  background-size: cover;
   background-position: 50%;
   border-radius: 10px 10px 0px 10px;
   -webkit-box-sizing: border-box;
@@ -2299,6 +2311,22 @@ span.current {
 .opt_form_block_list a img {
   margin-right: 10px;
 }
+.opt_form_main h3 {
+  font-family: "Stolzl";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #171C21;
+  margin-top: 50px;
+}
+.opt_form_main_text {
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #171C21;
+  margin-top: 20px;
+}
 .opt_form_main form p {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2344,8 +2372,8 @@ span.current {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #00A400;
-  border: 1px solid #00A400;
+  background: #FF0000;
+  border: 1px solid #FF0000;
   border-radius: 5px 5px 0px 5px;
   font-family: "Stolzl";
   font-weight: 500;
@@ -2402,7 +2430,54 @@ span.current {
   line-height: 13px;
   color: #999999;
 }
+.opt_form_main_final_check {
+  margin-left: 40px;
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #999999;
+}
+@media (min-width: 480px) {
+  .opt_form_block {
+    padding: 40px;
+  }
+  .opt_form_block_name {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 30px;
+  }
+  .opt_form_block_list {
+    position: relative;
+  }
+  .opt_form_block_list p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .opt_form_block_list a {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .opt_form_main_file {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .opt_form_main_file_text {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+}
 @media (min-width: 768px) {
+  .opt {
+    margin-bottom: 150px;
+  }
   .opt_assortment h2 {
     font-size: 36px;
     line-height: 43px;
@@ -2440,6 +2515,101 @@ span.current {
     font-size: 16px;
     line-height: 22px;
   }
+  .opt_form {
+    margin-top: 150px;
+  }
+  .opt_form_block {
+    padding: 30px;
+  }
+  .opt_form_block_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: relative;
+  }
+  .opt_form_block_list p {
+    width: 50%;
+  }
+  .opt_form_block_list a {
+    width: 50%;
+  }
+  .opt_form_main h3 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .opt_form_main_text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .opt_form_main form {
+    margin-top: 10px;
+  }
+  .opt_form_main form p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  .opt_form_main form p span {
+    margin-top: 40px;
+  }
+  .opt_form_main form p span.your-name {
+    width: calc(50% - 10px);
+  }
+  .opt_form_main form p span.text-711 {
+    width: calc(50% - 10px);
+  }
+  .opt_form_main form p span.your-email {
+    width: calc(50% - 10px);
+  }
+  .opt_form_main form p span.tel-otziv {
+    width: calc(50% - 10px);
+  }
+  .opt_form_main_final {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .opt_form_main_final .acceptance-846 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 30px;
+  }
+  .opt_form_main_final_check {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .opt_form_main_final .wpcf7-submit {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 180px;
+    min-width: 180px;
+    margin-top: 0px;
+  }
+  .opt_form_main_file_text {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 @media (min-width: 992px) {
   .opt_assortment_description {
@@ -2447,6 +2617,550 @@ span.current {
     margin: 0 auto;
     margin-top: 20px;
   }
+  .opt_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+  }
+  .opt_form_block {
+    min-width: 338px;
+    width: 338px;
+    padding: 30px 30px 74px 30px;
+  }
+  .opt_form_block_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .opt_form_block_list p {
+    width: auto;
+  }
+  .opt_form_block_list a {
+    width: auto;
+  }
+  .opt_form_main {
+    margin-left: 50px;
+  }
+  .opt_form_main h3 {
+    margin-top: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .opt_form_block {
+    padding: 40px;
+    min-width: 380px;
+    width: 380px;
+  }
+}
+@media (min-width: 1440px) {
+  .opt_form_main {
+    margin-left: 150px;
+  }
+}
+
+.send_review {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  margin-bottom: 100px;
+}
+.send_review_block h3 {
+  font-family: "Stolzl";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #171C21;
+}
+.send_review_block_text {
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #171C21;
+  margin-top: 20px;
+}
+.send_review_block form p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+.send_review_block form p span {
+  width: 100%;
+  margin-top: 40px;
+}
+.send_review_block form p span input {
+  width: 100%;
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+  border-bottom: 1px solid #999999;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 8px;
+}
+.send_review_block form p span textarea {
+  width: 100%;
+  height: 54px;
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+  border-bottom: 1px solid #999999;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 8px;
+}
+.send_review_block_file {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.send_review_block_file_wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.send_review_block_file_wrap_par {
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #171C21;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.send_review_block_file_wrap input {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  cursor: pointer;
+}
+.send_review_block_file_text {
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #999999;
+  margin-top: 10px;
+}
+.send_review_block_final_check {
+  margin-left: 40px;
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #999999;
+}
+.send_review_block .wpcf7-submit {
+  height: 52px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FF0000;
+  border: 1px solid #FF0000;
+  border-radius: 5px 5px 0px 5px;
+  font-family: "Stolzl";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 52px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-top: 30px;
+}
+@media (min-width: 480px) {
+  .send_review_block_file {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .send_review_block_file_text {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .send_review {
+    margin-bottom: 150px;
+  }
+  .send_review_block h3 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .send_review_block_text {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 20px;
+  }
+  .send_review_block form {
+    margin-top: 10px;
+  }
+  .send_review_block form p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  .send_review_block form p span {
+    margin-top: 40px;
+  }
+  .send_review_block form p span.menu-36 {
+    width: calc(50% - 15px);
+  }
+  .send_review_block form p span.your-name {
+    width: calc(50% - 15px);
+  }
+  .send_review_block form p span.text-711 {
+    width: calc(50% - 15px);
+  }
+  .send_review_block form p span.your-email {
+    width: calc(50% - 15px);
+  }
+  .send_review_block form p span.tel-otziv {
+    width: calc(50% - 15px);
+  }
+  .send_review_block form p span.your-message {
+    margin-top: 60px;
+  }
+  .send_review_block_final {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .send_review_block_final .acceptance-846 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 30px;
+  }
+  .send_review_block_final_check {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .send_review_block_final .wpcf7-submit {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 180px;
+    min-width: 180px;
+    margin-top: 0px;
+  }
+  .send_review_block_file_text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .send_review_block form p span.menu-36 {
+    width: calc(50% - 25px);
+  }
+  .send_review_block form p span.your-name {
+    width: calc(50% - 25px);
+  }
+  .send_review_block form p span.text-711 {
+    width: calc(50% - 25px);
+  }
+  .send_review_block form p span.your-email {
+    width: calc(50% - 25px);
+  }
+  .send_review_block form p span.tel-otziv {
+    width: calc(50% - 25px);
+  }
+  .send_review_block form p span.your-message {
+    margin-top: 60px;
+  }
+  .send_review_block_final_check {
+    width: 360px;
+  }
+}
+@media (min-width: 1200px) {
+  .send_review_block form p span.menu-36 {
+    width: calc(50% - 58px);
+  }
+  .send_review_block form p span.your-name {
+    width: calc(50% - 58px);
+  }
+  .send_review_block form p span.text-711 {
+    width: calc(50% - 58px);
+  }
+  .send_review_block form p span.your-email {
+    width: calc(50% - 58px);
+  }
+  .send_review_block form p span.tel-otziv {
+    width: calc(50% - 58px);
+  }
+  .send_review_block form p span.your-message {
+    margin-top: 60px;
+  }
+}
+
+.mailing {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  margin-bottom: 100px;
+}
+.mailing_block_left h3 {
+  font-family: "Stolzl";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #171C21;
+}
+.mailing_block_left_text {
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #171C21;
+  margin-top: 20px;
+}
+.mailing_block_right form p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+.mailing_block_right form p span {
+  width: 100%;
+  margin-top: 40px;
+}
+.mailing_block_right form p span input {
+  width: 100%;
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+  border-bottom: 1px solid #999999;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 8px;
+}
+.mailing_block_right form p span textarea {
+  width: 100%;
+  height: 54px;
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: black;
+  border-bottom: 1px solid #999999;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 8px;
+}
+.mailing_block_right_final {
+  margin-top: 50px;
+}
+.mailing_block_right_final_check {
+  margin-left: 40px;
+  font-family: "Stolzl";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  color: #999999;
+}
+.mailing_block_right .wpcf7-submit {
+  height: 52px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FF0000;
+  border: 1px solid #FF0000;
+  border-radius: 5px 5px 0px 5px;
+  font-family: "Stolzl";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 52px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin-top: 30px;
+}
+@media (min-width: 768px) {
+  .mailing {
+    margin-bottom: 150px;
+  }
+  .mailing_block_left h3 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .mailing_block_left_text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .mailing_block_right form {
+    margin-top: 10px;
+  }
+  .mailing_block_right form p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+  }
+  .mailing_block_right form p span {
+    margin-top: 40px;
+  }
+  .mailing_block_right form p span.menu-36 {
+    width: calc(50% - 15px);
+  }
+  .mailing_block_right form p span.your-name {
+    width: calc(50% - 15px);
+  }
+  .mailing_block_right form p span.text-711 {
+    width: calc(50% - 15px);
+  }
+  .mailing_block_right form p span.your-email {
+    width: calc(50% - 15px);
+  }
+  .mailing_block_right form p span.your-message {
+    margin-top: 60px;
+  }
+  .mailing_block_right_final {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mailing_block_right_final .acceptance-846 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 30px;
+  }
+  .mailing_block_right_final_check {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .mailing_block_right_final .wpcf7-submit {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 180px;
+    min-width: 180px;
+    margin-top: 0px;
+  }
+}
+@media (min-width: 992px) {
+  .mailing_block_right form p span.menu-36 {
+    width: calc(50% - 25px);
+  }
+  .mailing_block_right form p span.your-name {
+    width: calc(50% - 25px);
+  }
+  .mailing_block_right form p span.text-711 {
+    width: calc(50% - 25px);
+  }
+  .mailing_block_right form p span.your-email {
+    width: calc(50% - 25px);
+  }
+  .mailing_block_right_final_check {
+    width: 360px;
+  }
+}
+@media (min-width: 1200px) {
+  .mailing_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+  }
+  .mailing_block_left {
+    min-width: 462px;
+    width: 462px;
+  }
+  .mailing_block_right {
+    margin-left: 50px;
+  }
+  .mailing_block_right form {
+    margin-top: 0px;
+  }
+  .mailing_block_right form p span.menu-36 {
+    width: calc(50% - 20px);
+  }
+  .mailing_block_right form p span.your-name {
+    width: calc(50% - 20px);
+    margin-top: 0px;
+  }
+  .mailing_block_right form p span.text-711 {
+    width: calc(50% - 20px);
+  }
+  .mailing_block_right form p span.your-email {
+    width: calc(50% - 20px);
+    margin-top: 0px;
+  }
+}
+@media (min-width: 1366px) {
+  .mailing_block_right {
+    margin-left: 100px;
+  }
+}
+@media (min-width: 1440px) {
+  .mailing_block_left {
+    min-width: 525px;
+    width: 525px;
+  }
+}
+
+.mailing_back img {
+  width: 100%;
 }
 
 .footer {
