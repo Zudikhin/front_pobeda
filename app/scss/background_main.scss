@@ -1,12 +1,22 @@
 .background_main {
     position: relative;
     box-sizing: border-box;
-    height: 360px;
-    padding-bottom: 30px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    & img {
+        width: 100%;
+        &.big_mob {
+            display: none;
+        }
+        &.tablet {
+            display: none;
+        }
+        &.desktop {
+            display: none;
+        }
+    }
     &_title {
+        position: absolute;
+        left: 0px;
+        bottom: 10%;
         & h2 {
             font-family: 'Stolzl';
             font-style: normal;
@@ -14,66 +24,88 @@
             font-size: 32px;
             line-height: 38px;
             color: #171C21;
+            max-width: 320px;
+        }
+    }
+    @media (min-width: 480px) {
+        & img {
+            width: 100%;
+            &.mob {
+                display: none;
+            }
+            &.big_mob {
+                display: block;
+            }
+            &.tablet {
+                display: none;
+            }
+            &.desktop {
+                display: none;
+            }
+        }
+        &_title {
+            & h2 {
+                max-width: 100%;
+            }
         }
     }
     @media (min-width: 768px) {
-        height: 255px;
-        align-items: center;
-        padding-bottom: 0px;
+        & img {
+            width: 100%;
+            &.mob {
+                display: none;
+            }
+            &.big_mob {
+                display: none;
+            }
+            &.tablet {
+                display: block;
+            }
+            &.desktop {
+                display: none;
+            }
+        }
         &_title {
+            bottom: auto;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
             & h2 {
                 font-size: 36px;
                 line-height: 43px;
-                width: 350px;
+                max-width: 350px;
             }
         }
     }
     @media (min-width: 992px) {
+        & img {
+            width: 100%;
+            &.mob {
+                display: none;
+            }
+            &.big_mob {
+                display: none;
+            }
+            &.tablet {
+                display: none;
+            }
+            &.desktop {
+                display: block;
+            }
+        }
         &_title {
             & h2 {
-                width: 100%;
-                font-size: 36px;
-                line-height: 43px;
+                max-width: 420px;
             }
         }
     }
     @media (min-width: 1200px) {
-        height: 350px;
         &_title {
             & h2 {
                 font-size: 48px;
                 line-height: 58px;
+                max-width: 575px;
             }
         }
-    }
-}
-
-.background_main.shops {
-    background-image: url(../img/shops/shop_mob.png);
-    background-size: cover;
-    background-position: 50%;
-    @media (min-width: 480px) {
-        background-image: url(../img/shops/shop_big_mob.png);
-    }
-    @media (min-width: 768px) {
-        background-image: url(../img/shops/shop_tablet.png);
-    }
-    @media (min-width: 992px) {
-        background-image: url(../img/shops/shop_desk.png);
-    }
-}
-
-.background_main.opt_back {
-    background-image: url(../img/shops/shop_mob.png);
-    background-size: cover;
-    background-position: 50%;
-    @media (min-width: 480px) {
-        background-image: url(../img/shops/shop_big_mob.png);
-    }
-    @media (min-width: 768px) {
-        background-image: url(../img/shops/shop_tablet.png);
-    }
-    @media (min-width: 992px) {
-        background-image: url(../img/shops/shop_desk.png);
     }
 }
