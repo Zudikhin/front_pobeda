@@ -1,0 +1,370 @@
+.commercial_purchases {
+    box-sizing: border-box;
+    position: relative;
+    &_block {
+        & h2 {
+            font-family: 'Stolzl';
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #171C21;
+        }
+        &_text {
+            font-family: 'Stolzl';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #171C21;
+            margin-top: 30px;
+        }
+    }
+    &_list {
+        &_item {
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 25px 30px;
+            border: 1px solid #FF0000;
+            border-radius: 8px 8px 0px 8px;
+            background: transparent;
+            -webkit-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+            margin-top: 30px;
+            &:first-child {
+                margin-top: 50px;
+            }
+            & img {
+                &.default {
+                    display: block;
+                }
+                &.hover {
+                    display: none;
+                }
+            }
+            & p {
+                margin-left: 15px;
+                font-family: "Stolzl";
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: #171C21;
+            }
+            &:hover {
+                background: #FF0000;
+                transition: all 0.3s linear;
+                & img {
+                    &.default {
+                        display: none;
+                    }
+                    &.hover {
+                        display: block;
+                    }
+                }
+                & p {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        &_block {
+            & h2 {
+                font-size: 36px;
+                line-height: 43px;
+            }
+            &_text {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        &_list {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+            position: relative;
+            margin-top: 50px;
+            &_item {
+                width: calc(50% - 15px);
+                margin-top: 30px;
+                &:first-child {
+                    margin-top: 0px;
+                }
+                &:nth-child(2) {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_list {
+            &_item {
+                width: calc(25% - 90px/4);
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+.commercial_purchases_form {
+    position: relative;
+    box-sizing: border-box;
+    background: #F5F5F5;
+    padding: 60px 0px;
+    margin-top: 100px;
+    &_block {
+        &_left {
+            & h2 {
+                font-family: 'Stolzl';
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                color: #171C21;
+            }
+            &_text {
+                font-family: 'Stolzl';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: #171C21;
+                margin-top: 20px;
+            }
+        }
+        &_right {
+            margin-top: 10px;
+            & form {
+                & p {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    position: relative;
+                    & span {
+                        width: 100%;
+                        margin-top: 40px;
+                        & input {
+                            width: 100%;
+                            font-family: 'Stolzl';
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: black;
+                            border-bottom: 1px solid #999999;
+                            box-sizing: border-box;
+                            padding-bottom: 8px;
+                        }
+                    }
+                }
+            }
+            &_file {
+                margin-top: 30px;
+                margin-bottom: 50px;
+                &_wrap {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    &_par {
+                        font-family: 'Stolzl';
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #171C21;
+                        margin-left: 10px;
+                        cursor: pointer;
+                    }
+                    & input {
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+                }
+                &_text {
+                    font-family: 'Stolzl';
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 13px;
+                    color: #999999;
+                    margin-top: 10px;
+                }
+            }
+            &_final {
+                &_check {
+                    margin-left: 40px;
+                    font-family: "Stolzl";
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 13px;
+                    color: #999999;
+                }
+            }
+            & .wpcf7-submit {
+                height: 52px;
+                width: 100%;
+                box-sizing: border-box;
+                background: #FF0000;
+                border: 1px solid #FF0000;
+                border-radius: 5px 5px 0px 5px;
+                font-family: 'Stolzl';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 52px;
+                text-align: center;
+                color: #FFFFFF;
+                cursor: pointer;
+                margin-top: 30px;
+            }
+        }
+    }
+    @media (min-width: 480px) {
+        &_block {
+            &_right {
+                &_file {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    &_text {
+                        margin-top: 0px;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 60px 0px;
+        &_block {
+            &_left {
+                & h2 {
+                    font-size: 36px;
+                    line-height: 43px;
+                }
+                &_text {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+            &_right {
+                & form {
+                    margin-top: 10px;
+                    & p {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        position: relative;
+                        & span {
+                            margin-top: 40px;
+                        }
+                        & span.your-name {
+                            width: calc(50% - 15px);
+                        }
+                        & span.tel-otziv {
+                            width: calc(50% - 15px);
+                        }
+                        & span.your-email {
+                            width: 100%;
+                        }
+                        & span.your-message {
+                            margin-top: 60px;
+                        }
+                    }
+                }
+                &_final {
+                    display: flex;
+                    align-items: center;
+                    & .acceptance-846 {
+                        order: 2;
+                        margin-left: 30px;
+                    }
+                    &_check {
+                        font-size: 12px;
+                        line-height: 16px;
+                        width: 360px;
+                    }
+                    & .wpcf7-submit {
+                        -webkit-box-ordinal-group: 2;
+                        -ms-flex-order: 1;
+                        order: 1;
+                        width: 180px;
+                        min-width: 180px;
+                        margin-top: 0px;
+                    }
+                }
+                &_file {
+                    &_text {
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        &_block {
+            &_right {
+                & form {
+                    & p {
+                        & span.your-name {
+                            width: calc(50% - 25px);
+                        }
+                        & span.tel-otziv {
+                            width: calc(50% - 25px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        padding: 90px 0px 114px 0px;
+        &_block {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            &_left {
+                min-width: 450px;
+                width: 450px;
+            }
+            &_right {
+                margin-top: 0px;
+                margin-left: 50px;
+                & form {
+                    & p {
+                        & span {
+                            &.your-name {
+                                margin-top: 0px;
+                            }
+                            &.tel-otziv {
+                                margin-top: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1366px) {
+        &_block {
+            &_right {
+                margin-left: 100px;
+            }
+        }
+    }
+    @media (min-width: 1440px) {
+        &_block {
+            &_left {
+                min-width: 525px;
+                width: 525px;
+            }
+        }
+    }
+}

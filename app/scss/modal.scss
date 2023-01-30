@@ -1,0 +1,120 @@
+.back_modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.2s linear;
+    &.active {
+        z-index: 5;
+        opacity: 1;
+        transition: all 0.2s linear;
+    }
+}
+
+.modal_rent {
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    opacity: 0;
+    z-index: -2;
+    transition: all 0.2s linear;
+    &.active {
+        z-index: 6;
+        opacity: 1;
+        transition: all 0.2s linear;
+    }
+    &_close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    & h3 {
+        font-family: 'Stolzl';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #4D4747;
+    }
+    &_text {
+        font-family: 'Stolzl';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #171C21;
+        margin-top: 10px;
+    }
+    & form {
+        & p {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: relative;
+            & span {
+                width: 100%;
+                margin-top: 40px;
+                & input {
+                    width: 100%;
+                    font-family: 'Stolzl';
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: black;
+                    border-bottom: 1px solid #999999;
+                    box-sizing: border-box;
+                    padding-bottom: 8px;
+                }
+                & textarea {
+                    width: 100%;
+                    height: 54px;
+                    font-family: "Stolzl";
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: black;
+                    border-bottom: 1px solid #999999;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    padding-bottom: 8px;
+                }
+            }
+        }
+    }
+    & .wpcf7-submit {
+        height: 52px;
+        width: 100%;
+        box-sizing: border-box;
+        background: #FF0000;
+        border: 1px solid #FF0000;
+        border-radius: 5px 5px 0px 5px;
+        font-family: 'Stolzl';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 52px;
+        text-align: center;
+        color: #FFFFFF;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+    &_final {
+        margin-top: 50px;
+        &_check {
+            margin-left: 40px;
+            font-family: "Stolzl";
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 13px;
+            color: #999999;
+        }
+    }
+}

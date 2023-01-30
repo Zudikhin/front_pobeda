@@ -24,6 +24,20 @@ $(document).ready(function () {
         nextArrow: $('.main_next')
     });
 
+    $('.sublease_slider_block').slick({
+        dots: true,
+        infinite: true,
+        arrows: true,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 500,
+        autoplaySpeed: 2000,
+        cssEase: 'linear',
+        prevArrow: $('.sublease_slider_prev'),
+        nextArrow: $('.sublease_slider_next')
+    });
+
     $('.first_slider').slick({
         dots: false,
         infinite: true,
@@ -60,6 +74,23 @@ $(document).ready(function () {
               }
             }
         ]
+    });
+
+    $('.supplier_range_slider').slick({
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        arrows: false,
+        autoplaySpeed: 0,
+        speed: 6000,
+        slidesToShow: 1,
+        centerMode: false,
+        draggable:false,
+        focusOnSelect:false,
+        pauseOnFocus:false,
+        pauseOnHover:false,
+        cssEase: 'linear',
+        variableWidth: true
     });
 
     $('input[type="tel"]').inputmask("+7(999)999-99-99");
