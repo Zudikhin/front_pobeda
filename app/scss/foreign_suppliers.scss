@@ -1,0 +1,240 @@
+.foreign_suppliers {
+    box-sizing: border-box;
+    &_block {
+        &_left {
+            & h2 {
+                font-family: 'Stolzl';
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                color: #171C21;
+            }
+            & p {
+                font-family: 'Stolzl';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: #171C21;
+                margin-top: 30px;
+            }
+        }
+        &_right {
+            &_item {
+                margin-top: 40px;
+                & h5 {
+                    font-family: 'Stolzl';
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #171C21;
+                }
+                & p {
+                    font-family: 'Stolzl';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #171C21;
+                    opacity: 0.7;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        &_block {
+            &_left {
+                & h2 {
+                    font-size: 36px;
+                    line-height: 43px;
+                }
+                & p {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+            &_right {
+                display: flex;
+                align-items: flex-start;
+                position: relative;
+                justify-content: space-between;
+                margin-top: 50px;
+                &_item {
+                    width: calc(50% - 20px);
+                    margin-top: 0px;
+                    & h5 {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    & p {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_block {
+            &_left {
+                width: 850px;
+            }
+        }
+    }
+    @media (min-width: 1440px) {
+        &_block {
+            &_right {
+                width: 1064px;
+            }
+        }
+    }
+}
+
+.foreign_suppliers_win {
+    background: #F5F5F5;
+    box-sizing: border-box;
+    padding: 60px 0px;
+    margin-top: 100px;
+    &_block {
+        & h2 {
+            font-family: 'Stolzl';
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: #171C21;
+        }
+        &_wrap {
+            &_left {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                position: relative;
+                flex-wrap: wrap;
+                &_item {
+                    width: calc(50% - 10px);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 50px;
+                    & .title {
+                        display: flex;
+                        align-items: flex-end;
+                        & img {
+                            margin-right: 10px;
+                        }
+                        & span {
+                            font-family: 'Stolzl';
+                            font-weight: 500;
+                            font-size: 24px;
+                            line-height: 24px;
+                            text-transform: lowercase;
+                            color: #FF0000;
+                        }
+                    }
+                    &:nth-child(2) {
+                        & .title {
+                            & img {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                    & p {
+                        text-align: center;
+                        margin-top: 10px;
+                        font-family: 'Stolzl';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #171C21;
+                    }
+                }
+            }
+            &_right {
+                margin-top: 70px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                & p {
+                    text-align: center;
+                    font-family: 'Stolzl';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #171C21;
+                }
+                & img {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 90px 0px;
+        &_block {
+            & h2 {
+                font-size: 36px;
+                line-height: 43px;
+            }
+            &_wrap {
+                &_left {
+                    &_item {
+                        width: calc(50% - 50px);
+                        margin-top: 60px;
+                        & .title {
+                            & span {
+                                font-size: 48px;
+                                line-height: 38px;
+                            }
+                        }
+                        & p {
+                            font-size: 18px;
+                            line-height: 25px;
+                        }
+                    }
+                }
+                &_right {
+                    margin-top: 70px;
+                    & p {
+                        font-size: 18px;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        &_block {
+            &_wrap {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                &_left {
+                    width: 524px;
+                    &_item {
+                        width: calc(50% - 20px);
+                        margin-top: 66px;
+                    }
+                }
+                &_right {
+                    width: 308px;
+                    margin-top: 66px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_block {
+            &_wrap {
+                &_left {
+                    width: 600px;
+                    &_item {
+                        margin-top: 76px;
+                    }
+                }
+            }
+        }
+    }
+}
