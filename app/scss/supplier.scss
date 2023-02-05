@@ -167,6 +167,59 @@
                 & img {
                     width: 280px;
                 }
+            }    
+        }
+    }
+    @media (min-width: 1200px) {
+        &_slider {
+            position: relative;
+            &_left {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                height: 60px;
+                background: #FF0000;
+                opacity: 0.3;
+                box-sizing: border-box;
+                border-radius: 50%;
+                position: absolute;
+                left: 50px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                transition: all 0.2s linear;
+                & i {
+                    color: white;
+                }
+                &:hover {
+                    transition: all 0.2s linear;
+                    opacity: 1;
+                }
+            }
+            &_right {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                height: 60px;
+                background: #FF0000;
+                opacity: 0.3;
+                box-sizing: border-box;
+                border-radius: 50%;
+                position: absolute;
+                right: 50px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                transition: all 0.2s linear;
+                & i {
+                    color: white;
+                }
+                &:hover {
+                    transition: all 0.2s linear;
+                    opacity: 1;
+                }
             }
         }
     }
@@ -233,7 +286,7 @@
         }
     }
     &_feature {
-        margin-top: 50px;
+        margin-top: 30px;
         &_big {
             & img {
                 width: 100%;
@@ -296,6 +349,24 @@
                 }
             }
         }
+        &_slider {
+            width: 100%;
+            &_wrap {
+                width: 100%;
+                &_item {
+                    margin-top: 20px;
+                    & img {
+                        width: 100%;
+                    }
+                }
+            }
+            &_prev {
+                display: none !important;
+            }
+            &_next {
+                display: none !important;
+            }
+        }
     }
     @media (min-width: 480px) {
         &_list {
@@ -327,6 +398,22 @@
                             }
                         }
                     }
+                }
+            }
+            &_slider {
+                &_wrap {
+                    &_item {
+                        margin-top: 20px;
+                        & img {
+                            width: 100%;
+                        }
+                    }
+                }
+                &_prev {
+                    display: none !important;
+                }
+                &_next {
+                    display: none !important;
                 }
             }
         }
@@ -427,7 +514,7 @@
         }
         &_feature {
             margin-top: 136px;
-            align-items: flex-end;
+            height: 466px;
             &_small {
                 position: absolute;
                 right: 0px;
@@ -447,6 +534,90 @@
             &_info {
                 margin-bottom: 30px;
             }
+            &_slider {
+                height: 100%;
+                &_wrap {
+                    height: 100%;
+                    & .slick-list {
+                        height: 100%;
+                    }
+                    &_item {
+                        transition: all 0.3s linear;
+                        margin-top: 0px;
+                        margin-left: auto;
+                        position: relative;
+                        & img {
+                            transition: all 0.3s linear;
+                            object-fit: cover;
+                        }
+                    }
+                }
+                & .slick-slide {
+                    position: relative;
+                    & .supplier_logistics_feature_slider_wrap_item {
+                        display: flex !important;
+                        justify-content: flex-end;
+                        background-color: #FFFFFF;
+                        padding-bottom: 30px;
+                        & img {
+                            width: 434px;
+                        }
+                    }
+                    &.slick-current {
+                        & .supplier_logistics_feature_slider_wrap_item {
+                            & img {
+                                transform: scale(2);
+                                transition: all 0.6s linear;
+                            }
+                        }
+                    }
+                }
+                &_prev {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    width: 60px;
+                    height: 60px;
+                    background: #FF0000;
+                    opacity: 0.3;
+                    box-sizing: border-box;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: all 0.2s linear;
+                    & i {
+                        color: white;
+                    }
+                    &:hover {
+                        transition: all 0.2s linear;
+                        opacity: 1;
+                    }
+                }
+                &_next {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    width: 60px;
+                    height: 60px;
+                    background: #FF0000;
+                    opacity: 0.3;
+                    box-sizing: border-box;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: all 0.2s linear;
+                    & i {
+                        color: white;
+                    }
+                    &:hover {
+                        transition: all 0.2s linear;
+                        opacity: 1;
+                    }
+                }
+            }
+            &_info {
+                position: absolute;
+                right: 0px;
+                bottom: -24px;
+            }
         }
     }
     @media (min-width: 1200px) {
@@ -463,6 +634,41 @@
             }
         }
         &_feature {
+            height: 500px;
+            &_slider {
+                & .slick-slide {
+                    position: relative;
+                    & .supplier_logistics_feature_slider_wrap_item {
+                        width: 479px !important;
+                        display: flex !important;
+                        justify-content: flex-end;
+                        background-color: #FFFFFF;
+                        padding-bottom: 30px;
+                        & img {
+                            width: calc(100% - 30px);
+                            height: 236px;
+                        }
+                    }
+                    &.slick-current {
+                        & .supplier_logistics_feature_slider_wrap_item {
+                            & img {
+                                transform: scale(1.7);
+                                height: 500px;
+                            }
+                        }
+                    }
+                }
+                &_prev {
+                    position: absolute;
+                    bottom: 50px;
+                    right: 550px;
+                }
+                &_next {
+                    position: absolute;
+                    bottom: 50px;
+                    right: 450px;
+                }
+            }
             &_big {
                 max-width: 760px;
             }
@@ -471,7 +677,8 @@
                 right: -20px;
             }
             &_info {
-                margin-bottom: 40px;
+                margin-bottom: 0px;
+                bottom: 24px;
             }
         }
     }
@@ -484,18 +691,63 @@
                 width: 580px;
             }
             &_info {
-                margin-left: 60px;
-                margin-bottom: 30px;
+                right: 50px;
+            }
+            &_slider {
+                & .slick-slide {
+                    position: relative;
+                    &.slick-current {
+                        & .supplier_logistics_feature_slider_wrap_item {
+                            & img {
+                                transform: scale(1.9);
+                                height: 500px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
     @media (min-width: 1440px) {
         &_feature {
+            height: 590px;
             &_small {
                 width: 620px;
             }
             &_info {
                 margin-bottom: 15px;
+            }
+            &_slider {
+                & .slick-slide {
+                    position: relative;
+                    & .supplier_logistics_feature_slider_wrap_item {
+                        width: 579px !important;
+                        display: flex !important;
+                        justify-content: flex-end;
+                        background-color: #FFFFFF;
+                        padding-bottom: 30px;
+                        & img {
+                            width: calc(100% - 30px);
+                            height: 336px;
+                        }
+                    }
+                    &.slick-current {
+                        & .supplier_logistics_feature_slider_wrap_item {
+                            top: 60px;
+                            & img {
+                                transform: scale(1.7);
+                                height: 500px;
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+                &_next {
+                    right: 500px;
+                }
+                &_prev {
+                    right: 600px;
+                }
             }
         }
     }
